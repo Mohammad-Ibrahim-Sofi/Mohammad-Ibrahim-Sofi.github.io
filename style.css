@@ -428,3 +428,13 @@ footer{
     transform:translateY(-12px);
 
 }
+.hero-name{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    line-height:0.95;
+}
+
+.hero-name span{
+    display:block;
+}
