@@ -217,15 +217,15 @@ window.addEventListener("scroll", () => {
 
 const heroTitle =
     document.querySelector(".hero-content h1");
-
-if(heroTitle){
+    heroTitle.textContent = "Mr"
+if (heroTitle) {
 
     const letters =
         heroTitle.textContent.split("");
 
     heroTitle.textContent = "";
 
-    letters.forEach((letter,index)=>{
+    letters.forEach((letter, index) => {
 
         const span =
             document.createElement("span");
@@ -244,14 +244,14 @@ if(heroTitle){
 
         heroTitle.appendChild(span);
 
-        setTimeout(()=>{
+        setTimeout(() => {
 
-            span.style.opacity="1";
+            span.style.opacity = "1";
 
-            span.style.transform=
+            span.style.transform =
                 "translateY(0)";
 
-        },50*index);
+        }, 50 * index);
 
     });
 
@@ -261,20 +261,20 @@ if(heroTitle){
 // PARALLAX HERO EFFECT
 // ==========================================
 
-window.addEventListener("mousemove",(e)=>{
+window.addEventListener("mousemove", (e) => {
 
     const hero =
         document.querySelector("#hero");
 
-    if(!hero) return;
+    if (!hero) return;
 
     const x =
-        (window.innerWidth/2-e.clientX)
-        /50;
+        (window.innerWidth / 2 - e.clientX)
+        / 50;
 
     const y =
-        (window.innerHeight/2-e.clientY)
-        /50;
+        (window.innerHeight / 2 - e.clientY)
+        / 50;
 
     hero.style.backgroundPosition =
         `${x}px ${y}px`;
@@ -292,7 +292,7 @@ progressBar.id = "progressBar";
 
 document.body.appendChild(progressBar);
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
     const totalHeight =
         document.documentElement.scrollHeight -
@@ -300,7 +300,7 @@ window.addEventListener("scroll",()=>{
 
     const progress =
         (window.pageYOffset /
-        totalHeight) * 100;
+            totalHeight) * 100;
 
     progressBar.style.width =
         progress + "%";
