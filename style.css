@@ -441,11 +441,3 @@ footer{
 .hero-name span{
     display:block;
 }
-
-
-.qr{
-    margin-left: 50%;
-    background: white;
-    max-width: 50px;
-    max-height: 50px;
-}
